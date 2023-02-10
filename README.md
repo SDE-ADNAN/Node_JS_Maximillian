@@ -19,4 +19,15 @@ who so ever wants to learn from this repo or wants to contribute :
 4. I am using the readme for each section as a note to that section.
 
 
+---
+<strong style="color:red"> NOTE :-
+
+I had skipped the below modules
+1. section 1 : introduction (cause it contains just walk through for the whole course)
+2. Section 2 : Optional : Javascript - A quick refresher
+
+you can watch it if you are a beginer or just watch a youtube video of harshit vashisth // or // akshay saini 
+
+
+</strong>
 
