@@ -20,14 +20,13 @@ who so ever wants to learn from this repo or wants to contribute :
 
 
 ---
-<strong style="color:red"> NOTE :-
+![#f03c15] NOTE :-
 
 I had skipped the below modules
 1. section 1 : introduction (cause it contains just walk through for the whole course)
 2. Section 2 : Optional : Javascript - A quick refresher
 
 you can watch it if you are a beginer or just watch a youtube video of harshit vashisth // or // akshay saini 
+`#f03c15`
 
-
-</strong>
 
