@@ -10,3 +10,5 @@
 
 ---
 # 25 : How the web works ?
+
+![alt text](./imgs/how_the_web_works.jpeg)
