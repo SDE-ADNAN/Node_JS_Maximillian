@@ -1,6 +1,10 @@
-// require is a special reserved keyword in js which is used to access modules which are made for js applications
+const http = require('http') 
 
-const http = require('http') // this will seatch for a module named http
-const http = require('./http') // (absolute path) this will seatch for a https.js file in the same directory locally
-const http = require('/http') // (relative path) this will seatch for a https.js file in the same directory locally
-// three of the above examples auto complete the .js extension by there own 
+// we stored the server into the server variable which is returned by the createServer method on the http module
+
+const server = http.createServer((req,res)=>{
+    console.log(req)
+})
+
+// this below line means the server will listen at the (localhost:3000) whenever a new request is gemerated on the port 3000.
+server.listen(3000)
