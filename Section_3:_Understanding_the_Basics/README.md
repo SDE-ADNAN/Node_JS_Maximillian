@@ -23,3 +23,14 @@ this below is the image from the course itself.
 # 26 : Creating a node server
 
 1. created a nodejs server at first-nodejs-server folder
+2. below , these are the core nodejs modules
+
+   http ----> is used to launch a server and send requests.
+
+   https ---> is used to launch a ssl encrypted server
+
+   fs ------> is used to access the file system of the machine on which the server is running
+
+   path ----> is used to set paths of files and many other things like images and icons.
+
+   os ------> is used to have access to the operating system of the machine on which the server is up and running
