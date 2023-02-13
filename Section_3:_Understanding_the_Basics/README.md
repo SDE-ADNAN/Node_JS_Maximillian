@@ -45,3 +45,63 @@ const http = require('/http') // (relative path) this will seatch for a https.js
 // three of the above examples auto complete the .js extension by there own 
 
 ```
+4.  here below is the code which is so basic : 
+```js
+const http = require('http') 
+
+// we stored the server into the server variable which is returned by the createServer method on the http module
+
+const server = http.createServer((req,res)=>{
+    console.log(req)
+})
+
+// this below line means the server will listen at the (localhost:3000) whenever a new request is gemerated on the port 3000.
+server.listen(3000)
+```
+
+---
+
+# 25 : the node lifecycle and the eventloop
+
+node js program life cycle is as given below
+1. we run the server using the " node app.js " command then
+2. node starts the script which we have written in our app.js then
+3. code get's parsed , variables and functions are registered by node then
+4. with the help of event loop our program runs untill it has eventlistners registered
+
+we have a brief example of lifecycle of nodejs on the below link to gfg
+https://www.geeksforgeeks.org/nodejs-program-lifecycle/
+
+Lifecycle of Node.js program: In order to understand its lifecycle you must be familiar with the event loop. Event loops are something that makes your task very fast and also it perform multitasking. It allows Node.js to perform non-blocking I/O operations. You can learn more about event loop here. When you run your node file using node app.js then the script starts executing. It will be parsed by the parser into machine language that simply means all the functions and variables get registered in a memory location. After parsing the code our program reaches the point where it will not exit and will run an infinite no. of times which is possible all because of the event loop. Once the event loop has started executing and it will run as long as event listeners are registered.
+
+Example: You have the database and you have to access data from the database or you want to insert something into a database that simply requires some calling of the functions so when you call them it will take some amount of time (maybe nanoseconds or microseconds but it will take some time) so it is not possible for every request that we can wait for that particular time and then we move on to next request so that is where event loop comes into the picture. Your database part will be run in the background and the event loop will be running continuously so that it can handle the need for another request as well. This will be done on a single thread in node.js. You can also come out of the loop explicitly by using process.exit().
+
+```diff
+- note
++ nodejs is able to work and keep our server up and running due to the eventloop 
++ eventloop is the one and only thing which is responsible to keep our server running and also doing multitasking.
++ this is the line which registered an event listener into the eventloop and 
++ will keep that event listner of request in the eventloop untill we dont say it to 
++ remove it , and thats why it is able to keep the server running with looping the same line of code of listening.
+        const server = http.createServer((req,res)=>{
+            console.log(req)
+        })
+
+        ```
++ here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
+```
+5. code for app.js
+```js
+const http = require('http') 
+
+// we stored the server into the server variable which is returned by the createServer method on the http module
+
+const server = http.createServer((req,res)=>{
+    console.log(req)
+    //  here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
+    // process.exit()
+})
+
+// this below line means the server will listen at the (localhost:3000) whenever a new request is gemerated on the port 3000.
+server.listen(3000)
+```
