@@ -61,7 +61,7 @@ server.listen(3000)
 
 ---
 
-# 25 : the node lifecycle and the eventloop
+# 27 : the node lifecycle and the eventloop
 
 node js program life cycle is as given below
 1. we run the server using the " node app.js " command then
@@ -105,3 +105,14 @@ const server = http.createServer((req,res)=>{
 // this below line means the server will listen at the (localhost:3000) whenever a new request is gemerated on the port 3000.
 server.listen(3000)
 ```
+
+---
+
+# 28 : Controlling the Node.js Process
+ 
+Want to quit your running Node.js server?
+
+You can always do that by pressing CTRL + C in the terminal/ command prompt window where you started your server (i.e. where you ran node app.js).
+
+---
+
