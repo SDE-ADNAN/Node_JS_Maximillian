@@ -116,3 +116,47 @@ You can always do that by pressing CTRL + C in the terminal/ command prompt wind
 
 ---
 
+# 29 : understanding requests 
+
+after running the below code we got the below result :
+code :
+```js
+const server = http.createServer((req,res)=>{
+    console.log("request.url -->  "+req.url )
+    console.log("request.method -->  "+req.method )
+    console.log(req.headers)
+    //  here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
+    process.exit()
+})
+```
+
+and the result we got after running the " node app.js " command is as below:
+
+```shell
+request.url -->  /sss
+request.method -->  GET
+{
+  host: 'localhost:8080',
+  connection: 'keep-alive',
+  'cache-control': 'max-age=0',
+  'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="109", "Chromium";v="109"',
+  'sec-ch-ua-mobile': '?0',
+  'sec-ch-ua-platform': '"macOS"',
+  'upgrade-insecure-requests': '1',
+  'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36',
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site': 'none',
+  'sec-fetch-mode': 'navigate',
+  'sec-fetch-user': '?1',
+  'sec-fetch-dest': 'document',
+  'accept-encoding': 'gzip, deflate, br',
+  'accept-language': 'en-US,en;q=0.9',
+  cookie: 'adb=0; ufi=1; _gcl_au=1.1.71061844.1676256894; _ga=GA1.1.1650143955.1676256899; _gid=GA1.1.708053828.1676256899; inactivityTimer=1'
+}
+```
+
+---
+
+# 30 : Sending responses 
+
+
