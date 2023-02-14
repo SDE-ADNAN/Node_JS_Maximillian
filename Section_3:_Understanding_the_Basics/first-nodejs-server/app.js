@@ -3,9 +3,16 @@ const http = require('http')
 // we stored the server into the server variable which is returned by the createServer method on the http module
 
 const server = http.createServer((req,res)=>{
-    console.log("request.url -->  "+req.url )
-    console.log("request.method -->  "+req.method )
-    console.log(req.headers)
+ const url = req.url
+ if(url === '/'){
+    res.write('<html>')
+    res.write('<head><title>Enter Message</title></head>')
+    // the action attr will submit this form and will push the url to domain/message and the method attr will specify the request method as post and the name attr in input is very special as it will append the input value in request.message which we can use to process some further operations.
+    res.write('<body><form action="/message" method="POST" ><input name="message" type="text"></input><button>Send</button></form></body>')
+    res.write('</html>')
+   // we must return here the res.end() as we dont want to continue any further in this function or else it will also continue to run rest of the func.
+   return res.end()
+ }
     //  here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
     // this setHeader sets the type of response we will be giving back in reponse
     res.setHeader('Content-Type','text/html');
