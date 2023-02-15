@@ -1,9 +1,11 @@
 const http = require('http') 
+const fs = require("fs") // for file system access
 
 // we stored the server into the server variable which is returned by the createServer method on the http module
 
 const server = http.createServer((req,res)=>{
  const url = req.url
+ const method = req.method
  if(url === '/'){
     res.write('<html>')
     res.write('<head><title>Enter Message</title></head>')
@@ -12,6 +14,16 @@ const server = http.createServer((req,res)=>{
     res.write('</html>')
    // we must return here the res.end() as we dont want to continue any further in this function or else it will also continue to run rest of the func.
    return res.end()
+ }
+ if(url === '/message' && method === 'POST'){
+   // using the writeFileSync method to create a new file into the system.
+   fs.writeFileSync('message.txt','DUMMY');
+   // here using the 302 status code which stands for redirection 
+   res.statusCode = 302;
+   // here setting the headers location to be home page 
+   res.setHeader('Location','/')
+   // never forget to return the res.end().
+   return res.end();
  }
     //  here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
     // this setHeader sets the type of response we will be giving back in reponse
