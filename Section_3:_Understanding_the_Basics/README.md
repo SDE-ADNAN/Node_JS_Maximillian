@@ -230,4 +230,21 @@ const server = http.createServer((req,res)=>{
 
 # 33 : Redirecting requests
 
+in this video we learnt about , how to redirect the user to a url using the setHeader function of response obj . and also found the way to write a file into the file system using the filesystem utility lib "fs" the code for the same is given below.
+
+```js
+ if(url === '/message' && method === 'POST'){
+   // using the writeFileSync method to create a new file into the system.
+   fs.writeFileSync('message.txt','DUMMY');
+   // here using the 302 status code which stands for redirection 
+   res.statusCode = 302;
+   // here setting the headers location to be home page 
+   res.setHeader('Location','/')
+   // never forget to return the res.end().
+   return res.end();
+ }
+ ```
+ ---
+ 
+
 
