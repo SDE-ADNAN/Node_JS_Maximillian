@@ -7,17 +7,7 @@ const server = http.createServer((req,res)=>{
  const url = req.url
  const method = req.method
 
- const body =[];
 
- req.on('data', (chunk)=>{
-   console.log(chunk);
-   body.push(chunk);
- })
- req.on('end',()=>{
-    const parsedBody = Buffer.concat(body).toString();
-    const message = parsedBody.split('=')[1];
-    fs.writeFileSync('message.txt',message);
- })
  if(url === '/'){
     res.write('<html>')
     res.write('<head><title>Enter Message</title></head>')
@@ -28,6 +18,18 @@ const server = http.createServer((req,res)=>{
    return res.end()
  }
  if(url === '/message' && method === 'POST'){
+   const body =[];
+// this below on data function in called by nodejs when ever it has some thing in the requests data stream and calls this function for each individual chunk of the whole data.
+   req.on('data', (chunk)=>{
+     console.log(chunk);
+     body.push(chunk);
+   })
+   // this on end is called when each chunk got processed and at the end it writes to the file.
+   req.on('end',()=>{
+      const parsedBody = Buffer.concat(body).toString();
+      const message = parsedBody.split('=')[1];
+      fs.writeFileSync('message.txt',message);
+   })
    // using the writeFileSync method to create a new file into the system.
    // fs.writeFileSync('message.txt','DUMMY');
    // here using the 302 status code which stands for redirection 
