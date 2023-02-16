@@ -6,6 +6,18 @@ const fs = require("fs") // for file system access
 const server = http.createServer((req,res)=>{
  const url = req.url
  const method = req.method
+
+ const body =[];
+
+ req.on('data', (chunk)=>{
+   console.log(chunk);
+   body.push(chunk);
+ })
+ req.on('end',()=>{
+    const parsedBody = Buffer.concat(body).toString();
+    const message = parsedBody.split('=')[1];
+    fs.writeFileSync('message.txt',message);
+ })
  if(url === '/'){
     res.write('<html>')
     res.write('<head><title>Enter Message</title></head>')
@@ -17,7 +29,7 @@ const server = http.createServer((req,res)=>{
  }
  if(url === '/message' && method === 'POST'){
    // using the writeFileSync method to create a new file into the system.
-   fs.writeFileSync('message.txt','DUMMY');
+   // fs.writeFileSync('message.txt','DUMMY');
    // here using the 302 status code which stands for redirection 
    res.statusCode = 302;
    // here setting the headers location to be home page 
