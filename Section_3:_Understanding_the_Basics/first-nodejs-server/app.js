@@ -19,7 +19,7 @@ const server = http.createServer((req,res)=>{
  }
  if(url === '/message' && method === 'POST'){
    const body =[];
-// this below on data function in called by nodejs when ever it has some thing in the requests data stream and calls this function for each individual chunk of the whole data.
+// this below on data function in called by nodejs when ever it has some thing in the requests data stream and calls this function for each individual chunk of the whole data. 
    req.on('data', (chunk)=>{
      console.log(chunk);
      body.push(chunk);
