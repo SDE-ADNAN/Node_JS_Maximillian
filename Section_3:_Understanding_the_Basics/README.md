@@ -274,5 +274,10 @@ in this video we learnt about , how to redirect the user to a url using the setH
  }
  ```
 
+---
+# 35: Understanding Event Driven Execution.
 
+1. Node js works asyncronously to handle multiple requests at the same time
+2. for this what it does is that it registers an event into its events registory and contineus to execute the next lines and also knows that i have to complete the execution before the end event function is called so that's why the event registory is called as the eventloop as it keeps the track of each event that it has to trigger before the last event is triggered and the event loop is empty.
+3. and one thing to keep in mind is that nodejs never guarantees you that it will run the code in line by line manner as some functions are time consuming and must be handled seperately or else the code after that function will be not executed.
 
