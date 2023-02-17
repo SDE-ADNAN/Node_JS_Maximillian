@@ -25,19 +25,20 @@ const server = http.createServer((req,res)=>{
      body.push(chunk);
    })
    // this on end is called when each chunk got processed and at the end it writes to the file.
-   req.on('end',()=>{
+   return req.on('end',()=>{
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split('=')[1];
       fs.writeFileSync('message.txt',message);
-   })
-   // using the writeFileSync method to create a new file into the system.
-   // fs.writeFileSync('message.txt','DUMMY');
-   // here using the 302 status code which stands for redirection 
-   res.statusCode = 302;
-   // here setting the headers location to be home page 
-   res.setHeader('Location','/')
-   // never forget to return the res.end().
-   return res.end();
+         // using the writeFileSync method to create a new file into the system.
+         // fs.writeFileSync('message.txt','DUMMY');
+         // here using the 302 status code which stands for redirection 
+         res.statusCode = 302;
+         // here setting the headers location to be home page 
+         res.setHeader('Location','/')
+         // never forget to return the res.end().
+      return res.end();
+      })
+
  }
     //  here if we use the process.exit() , what it does is that it hard exitted the eventloop which we typically do not do to our server as we want our server to be running .
     // this setHeader sets the type of response we will be giving back in reponse
