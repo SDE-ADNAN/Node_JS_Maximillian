@@ -28,15 +28,11 @@ const server = http.createServer((req,res)=>{
    return req.on('end',()=>{
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.txt',message);
-         // using the writeFileSync method to create a new file into the system.
-         // fs.writeFileSync('message.txt','DUMMY');
-         // here using the 302 status code which stands for redirection 
+      fs.writeFile('message.txt',message,(err)=>{
          res.statusCode = 302;
-         // here setting the headers location to be home page 
          res.setHeader('Location','/')
-         // never forget to return the res.end().
-      return res.end();
+         return res.end();
+      });
       })
 
  }
