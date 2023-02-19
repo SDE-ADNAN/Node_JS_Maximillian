@@ -281,3 +281,26 @@ in this video we learnt about , how to redirect the user to a url using the setH
 2. for this what it does is that it registers an event into its events registory and contineus to execute the next lines and also knows that i have to complete the execution before the end event function is called so that's why the event registory is called as the eventloop as it keeps the track of each event that it has to trigger before the last event is triggered and the event loop is empty.
 3. and one thing to keep in mind is that nodejs never guarantees you that it will run the code in line by line manner as some functions are time consuming and must be handled seperately or else the code after that function will be not executed.
 
+---
+
+# 36 : Blocking and Non-Blocking code.
+
+1. fs.writeFileSync() blocks the code execution until the file operation is not finished. The Sync in the writeFileSync() method is short hand for "Synchronous" which means linear & continous.
+2. due to the writeFileSync the code execution gets blocked untill the file is not wrote.
+3. Also the new incoming requests of other user or same user will not be handled due to writeFileSync. Which will not be handled due to writeFileSync. Which must not be done as we want to take requests all the time.
+4. therefore we use the writeFile() method which takes 3 arguments 
+    - fileName
+    - content of the file to be written.
+    - a callback for error handling which will be triggered by nodejs if there's some error while creating the file. 
+code for fs.writeFile()
+```js
+ fs.writeFile('message.txt',message,(err)=>{
+         res.statusCode = 302;
+         res.setHeader('Location','/')
+         return res.end();
+      });
+```
+5. if we want to send a response after creating the file then it is recommended that we must write that response code inside the callback function so that we can compare that if err then return err or else do return the success response. btw the err object that we get inside the err callback of writefile is a null / obj type.
+6. why is nodejs so performant is because it outseources the multithreading work to the operation system and comes back to the code and runs the next line this is the reason why nodejs never stops the code execution and always keeps registering new events to the event loop and habdling new tasks to the operating system.
+
+
