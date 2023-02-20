@@ -303,4 +303,27 @@ code for fs.writeFile()
 5. if we want to send a response after creating the file then it is recommended that we must write that response code inside the callback function so that we can compare that if err then return err or else do return the success response. btw the err object that we get inside the err callback of writefile is a null / obj type.
 6. why is nodejs so performant is because it outseources the multithreading work to the operation system and comes back to the code and runs the next line this is the reason why nodejs never stops the code execution and always keeps registering new events to the event loop and habdling new tasks to the operating system.
 
+---
+
+# 37 : Nodejs Looking Behind the scenes 
+
+Node.js is designed to be asynchronous and event-driven, which means that it is built to handle large amounts of I/O operations and multiple requests at the same time. Behind the scenes, Node.js has a few key features that make it stand out from other server-side technologies.
+
+- Single Threaded Architecture:
+Node.js is built on a single-threaded event loop architecture. This means that there is only one thread of execution in a Node.js process. This thread is responsible for executing all JavaScript code and handling all I/O operations. This is different from traditional server-side technologies like Apache, which create a new thread for each request.
+
+- Event Loop:
+The event loop is the heart of the Node.js architecture. It is responsible for handling I/O operations, timers, and callbacks. When a new I/O operation is initiated, Node.js registers the callback function for that operation with the event loop. The event loop then waits for the I/O operation to complete, at which point it calls the registered callback function.
+
+- Non-Blocking I/O:
+Node.js uses a non-blocking I/O model, which means that I/O operations are asynchronous and do not block the event loop. This allows Node.js to handle many requests simultaneously without getting bogged down. When an I/O operation is initiated, Node.js registers the callback function for that operation with the event loop, and the event loop continues to run other code while it waits for the I/O operation to complete.
+
+- Blocking Code:
+Blocking code is code that can block the event loop, preventing it from handling other requests. For example, if a function performs a long-running operation synchronously, it can cause the event loop to become blocked. To avoid this, Node.js provides asynchronous versions of many I/O operations, as well as APIs for running blocking code in a separate thread.
+
+In summary, Node.js is built on a single-threaded, event-driven architecture that uses non-blocking I/O to handle multiple requests simultaneously. The event loop is the key component of this architecture, and it is responsible for handling I/O operations, timers, and callbacks. To avoid blocking the event loop, Node.js provides asynchronous I/O operations and APIs for running blocking code in a separate thread.
+
+
+
+
 
