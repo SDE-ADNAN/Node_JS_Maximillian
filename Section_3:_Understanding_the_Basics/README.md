@@ -368,3 +368,35 @@ f. Close callbacks phase: This phase executes any callbacks related to closed re
 
 
 
+---
+
+# 38 : Using the Node Modules System
+
+1. did some file structure changes and got to know how to connect different files for code splitting.
+code
+
+```js
+///////////////////// IN ROUTES.js
+// this will make the requestHandler function available whereever it is required
+module.exports = requestHandler
+
+// OR OR OR
+module.exports = {
+    handler:requestHandler,
+    someText:"Adnan"
+}
+
+// OR OR OR
+module.exports.handler=requestHandler;
+module.exports.someText = "Adnan";
+
+// OR OR OR
+exports.handler=requestHandler;
+exports.someText = "Adnan"
+
+
+///////////////////////////// IN APP.js
+const routes = require('./routes')
+const server = http.createServer(routes.handler)
+
+```
