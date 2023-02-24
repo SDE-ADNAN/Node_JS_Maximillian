@@ -400,3 +400,33 @@ const routes = require('./routes')
 const server = http.createServer(routes.handler)
 
 ```
+
+---
+
+# 39 : Module summary
+
+
+1. How the web works.
+Client --> sends Request --> Server(receives req) --> sends Response --> Client (receives res).
+
+2. program lifecycle and eventloop
+    - Node.js runs non-blocking JS code and uses an eventloop driven code ("Event loop") for running your logic.
+    - A node program exits as soon as there's no more work to do.
+    - <strong style="color:red">Note : The createServer() event never finishes by default</strong>
+
+3. A synchronous code :
+    - Js code is non-blocking .
+    - due to usage of callback and events the <strong style="color:red">js codes execution order respective to line number changes !!!</strong>
+
+4. requests and responses :
+    - Parse request data into chunks (Streams and buffers).
+    - Avoid "double responses".
+
+5. Nodejs and core modules :
+    - Nodejs ships with multiple core modules (http,fs,path,.....)
+    - Core modules can be imported into any files to be used there.
+    - import via "require('module')" syntax.
+
+6. The Node Module System :
+    - import via require('./path_to_file') for custom files or require('module-name') for core module and third party modules.
+    - Export via module.exports or just exports (for multi exports). 
