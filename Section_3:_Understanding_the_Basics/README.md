@@ -430,3 +430,16 @@ Client --> sends Request --> Server(receives req) --> sends Response --> Client 
 6. The Node Module System :
     - import via require('./path_to_file') for custom files or require('module-name') for core module and third party modules.
     - Export via module.exports or just exports (for multi exports). 
+
+--- 
+
+# ASSIGNMENT :
+
+key points of assignment : 
+
+1. Spin up a Node js-driven Server (on port 3000)
+2. Handle two Routes: "" and "users"
+3. Return some greeting text on "/"
+4. Return a list of dummy users (e.g. <ul><li>User 1 </i></ul>)
+5. Add a form with a "username" <input> to the "/" page and submit a POST request to "/create-user" upon a button click
+6. Add the "/create-user" route and parse the incoming data (i.e. the username) and simply log it to the console
