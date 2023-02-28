@@ -21,4 +21,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "start-server": "node app.js" 
-  },```
+}```
+
+---
+
+# 43 : Installing ThirdParty Packages
+
+ We require all of this components to run our development workflows;
+- Local project
+- < Your Project >
+- Core Node Packages
+- Dependencies (3rd party Node packages)
+    - these are installed and managed by npm
+    - they can be express , body-parser , etc.
