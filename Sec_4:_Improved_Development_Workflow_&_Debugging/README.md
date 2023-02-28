@@ -41,3 +41,8 @@ For installing development dependencies we use npm commands :
 - "npm install packageName --save-dev" this will save the package as a development dependency and says that we will use this package just for development and not for production.
 - "npm install packageName -g" this specifies that this package will be installed as a global dependency and will be available all over the system where ever it is needed.
 
+## We use nodemon to handle the task of restarting the server whenever we are making any file changes, and nodemon will handle this very well, the command to install nodemon is below
+
+```shell
+npm install nodemon --save
+```
