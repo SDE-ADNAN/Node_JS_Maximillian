@@ -9,5 +9,8 @@
   },
   "author": "SDE-ADNAN",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
 }
