@@ -106,3 +106,43 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 # 46 : Understanding different Error Types
 
+1.  Syntax Errors:
+        Syntax errors occur when there is a mistake in the way that the code is written. These errors are usually caught by the compiler or interpreter during the compilation or parsing phase of the program. Syntax errors prevent the program from running at all.
+        Example of a syntax error in Node.js:
+
+        ```js
+        console.lo("Hello, world!");
+        ```
+        This code will produce a syntax error because the correct syntax for the console.log function is console.log() and not console.lo().
+
+
+2.  Runtime Errors:
+        Runtime errors occur when the program is running and encounter an unexpected condition or behavior that was not accounted for in the code. These errors can cause the program to crash or produce unexpected results.
+        Example of a runtime error in Node.js:
+
+        ```js
+        let a = 10;
+        let b = 0;
+        let c = a / b;
+        console.log(c);
+        ```
+        This code will produce a runtime error because it is attempting to divide by zero, which is not a valid mathematical operation.
+
+
+3.  Logical Errors:
+        Logical errors occur when the program runs without any syntax or runtime errors, but produces incorrect results due to a flaw in the logic of the program. These errors can be difficult to detect and fix, as the program is technically running correctly, but producing unexpected results.
+        Example of a logical error in Node.js:
+
+        ```js
+        function calculateSum(array) {
+        let sum = 0;
+        for (let i = 1; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+        }
+
+        let numbers = [1, 2, 3, 4, 5];
+        console.log(calculateSum(numbers));
+        ```
+        This code will produce a logical error because the for loop starts at index 1 instead of index 0, causing the first element of the array to be skipped in the summation.
