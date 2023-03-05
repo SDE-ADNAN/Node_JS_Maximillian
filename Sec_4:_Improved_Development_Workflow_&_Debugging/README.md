@@ -165,3 +165,13 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 1. logical errors are the one errors that do not spit out error msgs on to the console or terminal.
 2. BUt , they just cause our application not to work in the way that we were expecting it to be working.
+3. steps to use debugger :
+    - quit the project if it is running 
+    - setup breakpoints where you want your app to stop once you start.
+    - choose the app.js/root file 
+    - then go to "Run" option on the vscode top menu and choose start debugging.
+    - after that use the app and reach the process where you want to lookup in to the code.
+    - and then the debugger on vscode will start the app and stop when it reaches the breakpoint.
+    - after that you can hover at the variables and then see that the value inside your variables is now shown when you hover.
+    
+ 
