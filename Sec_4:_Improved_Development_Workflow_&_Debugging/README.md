@@ -160,3 +160,8 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 1. runtime errors are the errors above syntax errors and they crash the running app while we try to start the app.
 2. runtime error message is shown in the terminal where our app is running and thats where we can find the line number and all the imp notes for resolving that perticular error.
+
+# 50 : Logical errors 
+
+1. logical errors are the one errors that do not spit out error msgs on to the console or terminal.
+2. BUt , they just cause our application not to work in the way that we were expecting it to be working.
