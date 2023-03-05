@@ -177,4 +177,16 @@ In the last lecture, we added nodemon as a local dependency to our project.
     - you can also use the watch option on the debug view on the left side and write a perticular variable name that you want to debug and see specifically:
     - you can also see the call stack and all the breakpoints and also edit your breakpoints. from right there. 
 
- 
+
+---
+
+# 51 : Using the debugger
+
+1. you can use the debug console terminal's last line as a realtime nodejs/js scripts compilor type of thing that is very helpful.
+2. like someVariable.split("=")   this will give the result right at the runtime in the debugger.
+
+---
+
+# 52 : Restarting the debugger Automatically After Editing our app
+
+1.  
