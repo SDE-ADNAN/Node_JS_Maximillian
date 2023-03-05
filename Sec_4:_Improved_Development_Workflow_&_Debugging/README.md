@@ -104,7 +104,7 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 ---
 
-# 46 : Understanding different Error Types
+# 47 : Understanding different Error Types
 
 1.  Syntax Errors:
         Syntax errors occur when there is a mistake in the way that the code is written. These errors are usually caught by the compiler or interpreter during the compilation or parsing phase of the program. Syntax errors prevent the program from running at all.
@@ -146,3 +146,10 @@ In the last lecture, we added nodemon as a local dependency to our project.
         console.log(calculateSum(numbers));
         ```
         This code will produce a logical error because the for loop starts at index 1 instead of index 0, causing the first element of the array to be skipped in the summation.
+
+---
+
+# 48 : Fixing and Finding Syntax errors 
+
+1. syntax errors are very easy to find and fix .
+2. if you r using good project setup then likely the IDE/visual studio code automatically shows you red sweggly lines below the error.
