@@ -153,3 +153,10 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 1. syntax errors are very easy to find and fix .
 2. if you r using good project setup then likely the IDE/visual studio code automatically shows you red sweggly lines below the error.
+
+---
+
+# 49 : Dealing with runtime errors
+
+1. runtime errors are the errors above syntax errors and they crash the running app while we try to start the app.
+2. runtime error message is shown in the terminal where our app is running and thats where we can find the line number and all the imp notes for resolving that perticular error.
