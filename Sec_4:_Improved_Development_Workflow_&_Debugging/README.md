@@ -174,5 +174,7 @@ In the last lecture, we added nodemon as a local dependency to our project.
     - and then the debugger on vscode will start the app and stop when it reaches the breakpoint.
     - after that you can hover at the variables and then see that the value inside your variables is now shown when you hover.
     - if you want to see all the variables and all the scopes and closures etc you can choose the debug console option in the view option in the vscodes top menu.
+    - you can also use the watch option on the debug view on the left side and write a perticular variable name that you want to debug and see specifically:
+    - you can also see the call stack and all the breakpoints and also edit your breakpoints. from right there. 
 
  
