@@ -173,5 +173,6 @@ In the last lecture, we added nodemon as a local dependency to our project.
     - after that use the app and reach the process where you want to lookup in to the code.
     - and then the debugger on vscode will start the app and stop when it reaches the breakpoint.
     - after that you can hover at the variables and then see that the value inside your variables is now shown when you hover.
-    
+    - if you want to see all the variables and all the scopes and closures etc you can choose the debug console option in the view option in the vscodes top menu.
+
  
