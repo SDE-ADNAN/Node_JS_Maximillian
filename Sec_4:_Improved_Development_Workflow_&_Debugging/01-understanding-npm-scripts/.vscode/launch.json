@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            // this will start debugger all the time from the app.js as we have to start the server before grtting into anything.
+            "program": "${workspaceFolder}/app.js",
+            // this restarts the debugger
+            "restart": true,
+            // this is defaultly to node but we have to write nodemon instead of node
+            "runtimeExecutable": "nodemon",
+            // this below uses the integrated terminal as the consle  and shows all the logs which we log
+            "console": "integratedTerminal",
+        }
+    ]
+}
