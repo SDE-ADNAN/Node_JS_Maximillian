@@ -189,4 +189,54 @@ In the last lecture, we added nodemon as a local dependency to our project.
 
 # 52 : Restarting the debugger Automatically After Editing our app
 
-1.  
+1.  in this we will get to know how can we use the debugger more robustly so that if we change any file in our project 
+
+2. So on the run option of vs codes top menu you can see "Add configuration" option which you have to click and vscode will create a vscode config file inside the vscode folder which got just now created .
+3. nav to that config file inside the .vscode folder and the config file will be named as launch.json (choose nodejs while adding the configuration).
+4. the launch.json was like this : 
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
+        }
+    ]
+}
+```
+BUT WE CHANGED IT TO :
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            // this will start debugger all the time from the app.js as we have to start the server before grtting into anything.
+            "program": "${workspaceFolder}/app.js",
+            // this restarts the debugger
+            "restart": true,
+            // this is defaultly to node but we have to write nodemon instead of node
+            "runtimeExecutable": "nodemon",
+            // this below uses the integrated terminal as the consle  and shows all the logs which we log
+            "console": "integratedTerminal",
+        }
+    ]
+}
+```
