@@ -257,3 +257,5 @@ Done some walkthrough till the 5Th section for just getting an idea of what we a
 reached till 97th video and section 7th
 
 reached till 100th video 
+
+watched code damns node js crash course
