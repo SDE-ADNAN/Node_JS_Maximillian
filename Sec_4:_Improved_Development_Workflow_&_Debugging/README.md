@@ -261,3 +261,5 @@ reached till 100th video
 watched code damns node js crash course
 
 done till 115th video
+
+done till 123rd video "Adding a cart modal"
