@@ -263,3 +263,5 @@ watched code damns node js crash course
 done till 115th video
 
 done till 123rd video "Adding a cart modal"
+
+will try to complete this course asap and then build node projects 
