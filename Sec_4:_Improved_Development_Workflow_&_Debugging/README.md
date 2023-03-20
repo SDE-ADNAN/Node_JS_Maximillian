@@ -265,3 +265,5 @@ done till 115th video
 done till 123rd video "Adding a cart modal"
 
 will try to complete this course asap and then build node projects 
+
+reached till video 125 th 
