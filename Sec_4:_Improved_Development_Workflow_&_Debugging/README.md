@@ -266,4 +266,4 @@ done till 123rd video "Adding a cart modal"
 
 will try to complete this course asap and then build node projects 
 
-reached till video 125 th 
+completed the 128. Adding the Product-Delete Functionality
