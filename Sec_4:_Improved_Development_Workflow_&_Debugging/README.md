@@ -269,3 +269,5 @@ will try to complete this course asap and then build node projects
 completed the 128. Adding the Product-Delete Functionality
 
 completed the 138th video.
+
+finally !! completed the "Section 9: Dynamic Routes & Advanced Models"
