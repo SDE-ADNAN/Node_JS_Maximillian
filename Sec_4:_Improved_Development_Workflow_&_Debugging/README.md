@@ -273,3 +273,5 @@ completed the 138th video.
 finally !! completed the "Section 9: Dynamic Routes & Advanced Models"
 
 Started with the "section 10 : SQL Intro"
+
+completed the section 10 of SQL Intro
