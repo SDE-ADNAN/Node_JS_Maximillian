@@ -275,3 +275,5 @@ finally !! completed the "Section 9: Dynamic Routes & Advanced Models"
 Started with the "section 10 : SQL Intro"
 
 completed the section 10 of SQL Intro
+
+reached till the lecture 159 : updating products using sequalize.
