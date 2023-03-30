@@ -277,3 +277,5 @@ Started with the "section 10 : SQL Intro"
 completed the section 10 of SQL Intro
 
 reached till the lecture 159 : updating products using sequalize.
+
+will continue on sequalize and after sometime will start further.
