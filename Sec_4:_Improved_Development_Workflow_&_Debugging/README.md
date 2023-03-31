@@ -279,3 +279,5 @@ completed the section 10 of SQL Intro
 reached till the lecture 159 : updating products using sequalize.
 
 will continue on sequalize and after sometime will start further.
+
+completed till 163 lecture creating a dummy user.
