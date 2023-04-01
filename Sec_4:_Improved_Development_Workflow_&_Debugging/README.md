@@ -285,3 +285,5 @@ completed till 163 lecture creating a dummy user.
 completed understanding the 164 : Using Magic Association Methods.
 
 completed understanding the 165 : Fetching related Products.
+
+completed understanding the 166 : One-to-many & Many-to-Many Relations .
