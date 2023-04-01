@@ -281,3 +281,5 @@ reached till the lecture 159 : updating products using sequalize.
 will continue on sequalize and after sometime will start further.
 
 completed till 163 lecture creating a dummy user.
+
+completed understanding the 164 : Using Magic Association Methods.
