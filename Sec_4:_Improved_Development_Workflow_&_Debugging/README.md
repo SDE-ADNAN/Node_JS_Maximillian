@@ -279,3 +279,19 @@ we just use the local scope of variables once we are in the debug view of vs cod
 - Analyze variable values at runtime.
 - Look into (and manipulate) variables at runtime.
 - Set breakpoints cleverly (i.e respect the async/ event-driven nature).
+
+---
+
+# 56 : Useful resources and links
+
+Attached, you find the source code for this section.
+
+When using my source code, make sure to run npm install in the extracted folder!
+
+Useful resources:
+
+More on debugging Node.js: https://nodejs.org/en/docs/guides/debugging-getting-started/
+
+Debugging Node in Visual Studio Code: https://code.visualstudio.com/docs/nodejs/nodejs-debugging
+
+Resources for this lecture
