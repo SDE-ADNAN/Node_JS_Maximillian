@@ -251,39 +251,10 @@ This article will be very helpful: https://code.visualstudio.com/docs/nodejs/nod
 
 ---
 
-Done some walkthrough till the 5Th section for just getting an idea of what we are gonna experiance in future.
+# 54 : Changing Variables in debug console
 
+we just use the local scope of variables once we are in the debug view of vs code there we can simply select the variable and type the value which u wanna change to.
 
-reached till 97th video and section 7th
+---
 
-reached till 100th video 
-
-watched code damns node js crash course
-
-done till 115th video
-
-done till 123rd video "Adding a cart modal"
-
-will try to complete this course asap and then build node projects 
-
-completed the 128. Adding the Product-Delete Functionality
-
-completed the 138th video.
-
-finally !! completed the "Section 9: Dynamic Routes & Advanced Models"
-
-Started with the "section 10 : SQL Intro"
-
-completed the section 10 of SQL Intro
-
-reached till the lecture 159 : updating products using sequalize.
-
-will continue on sequalize and after sometime will start further.
-
-completed till 163 lecture creating a dummy user.
-
-completed understanding the 164 : Using Magic Association Methods.
-
-completed understanding the 165 : Fetching related Products.
-
-completed understanding the 166 : One-to-many & Many-to-Many Relations .
+# 55 : 
