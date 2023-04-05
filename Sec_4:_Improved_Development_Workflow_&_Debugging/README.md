@@ -257,4 +257,25 @@ we just use the local scope of variables once we are in the debug view of vs cod
 
 ---
 
-# 55 : 
+# 55 : Wrap UP
+
+## NPM
+- npm stands for "Node Package Manager" and allows you to manage your Node project and it's dependencies.
+- You can initialize a project with "npm init".
+- npm scripts can be defined in the package.json to give you "shortcuts" to common tasks/commands.
+
+## 3rd Party Packages
+- Node projects typically don't just use core modules and custom code but also third-party packages.
+- You install them via npm.
+- You can differentiate between production depensencies (--save), development dependencies (--save-dev) and global dependencies (-g).
+
+## Types of Errors 
+- Synatax , runtime & logical errors can break your app.
+- Syntax & runtime errors throw (helpful) error messages (with line numbers!).
+- Logical errors can be fixed with testing and help of the debugger
+
+## Debugging
+- Use the VS Code Node Debugger to step into your code and go through it step by step.
+- Analyze variable values at runtime.
+- Look into (and manipulate) variables at runtime.
+- Set breakpoints cleverly (i.e respect the async/ event-driven nature).
