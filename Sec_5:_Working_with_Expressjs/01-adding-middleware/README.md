@@ -54,5 +54,37 @@ const requestHandler = (req, res) => {
 
 ---
 
-## Installing Express.js
+## 59 : Installing Express.js
 
+- we will need to install express using the below command 
+```shell
+// --save and not --save-dev because this is not a tool that we will just need while we develop our application locally but w'll also need it while it is deployed onto a server.
+npm install --save express
+```
+- here i had used the project provided by max in the state where he already used express and made the server respond to the incoming request and also return a h1 with some text.
+- here is the app
+```js
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+// this app.use() method is used to add a middleware in express and is used to 
+app.use((req, res, next) => {
+    console.log('In the middleware!');
+    next(); // Allows the request to continue to the next middleware in line
+});
+
+app.use((req, res, next) => {
+    console.log('In another middleware!');
+    res.send('<h1 style="color:red;">Hello from Express!</h1>');
+});
+
+const server = http.createServer(app);
+
+server.listen(3000); // port to listen
+```
+---
+
+## 60: Adding middleware.
