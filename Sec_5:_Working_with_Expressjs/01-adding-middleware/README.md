@@ -64,12 +64,16 @@ npm install --save express
 - here i had used the project provided by max in the state where he already used express and made the server respond to the incoming request and also return a h1 with some text.
 - here is the app
 ```js
+
+// step 1 {import http}
 const http = require('http');
 
+// step 2 { import express}
 const express = require('express');
-
+// Step 3 { call the express import like express() and store it in an app variable}
 const app = express();
 
+// step4 { define a middleware}
 // this app.use() method is used to add a middleware in express and is used to 
 app.use((req, res, next) => {
     console.log('In the middleware!');
@@ -81,8 +85,9 @@ app.use((req, res, next) => {
     res.send('<h1 style="color:red;">Hello from Express!</h1>');
 });
 
+// step 5 { pass the app variable to the http.createServer() method }
 const server = http.createServer(app);
-
+// step 6 { then declare the port where you want your app to be accessible }
 server.listen(3000); // port to listen
 ```
 ---
