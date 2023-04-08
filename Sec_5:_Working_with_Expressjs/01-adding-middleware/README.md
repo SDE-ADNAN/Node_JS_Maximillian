@@ -93,3 +93,23 @@ server.listen(3000); // port to listen
 ---
 
 ## 60: Adding middleware.
+
+- middlewares  work like :
+
+![Image](./IMG_1370.jpg)
+
+- every method that looks like this:
+```js
+// here app.use handles all the request methods (GET, POST, PUT, DELETE,ETC ETC)
+app.use((req, res, next) => {
+    console.log('In the middleware!');
+    next(); // Allows the request to continue to the next middleware in line
+});
+```
+is a middleware 
+- here next is the method which tells express that it must chainup the next middlewares after finishing this middleware , so basically it tells express to also run next middlewares after this one , or else in express's default behaviour it just stops after just running a middleware.
+- we can add as many middlewares asmuch we need and this is the best reason why we use middlewares.
+
+---
+
+# 61 :
