@@ -13,7 +13,8 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 // here also order matters 
 // here we are just using the adminRoutes object exported
-app.use(adminRoutes);
+app.use("/admin",adminRoutes);
+// here "/admin" will be added to the path of the adminRoutes middlewares  defaultly.
 
 app.use(shopRoutes);
 
