@@ -7,6 +7,7 @@ const bodyParser = require('body-Parser');
 const app = express();
 
 const adminRoutes = require("./routes/admin")
+const shopRoutes = require("./routes/shop")
 
 app.use(bodyParser.urlencoded({extended:false}))
 
@@ -14,11 +15,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 // here we are just using the adminRoutes object exported
 app.use(adminRoutes);
 
-// root path.
-app.use('/',(req, res, next) => {
-    console.log('In another middleware!');
-    res.send('<h1 style="color:red;">Hello from Express!</h1>');
-});
+app.use(shopRoutes);
 
 const server = http.createServer(app);
 
