@@ -2,12 +2,11 @@ const http = require('http');
 
 const express = require('express');
 
+const bodyParser = require('body-Parser');
+
 const app = express();
 
-app.use((req,res,next)=>{
-    console.log(" This always runs :::: ")
-    next();
-})
+app.use(bodyParser.urlencoded({extended:false}))
 
 // add-product middleware.
 app.use('/add-product',(req, res, next) => {
