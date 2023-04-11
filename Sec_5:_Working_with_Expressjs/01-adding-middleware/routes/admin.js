@@ -1,4 +1,6 @@
-const express = require('express')
+const path =require('path');
+
+const express = require('express');
 
 const router = express.Router();
 
@@ -14,6 +16,7 @@ router.get('/add-product',(req, res, next) => {
 router.post('/add-product',(req, res, next) => {
     console.log('In the product middleware!');
     console.log(req.body) // without a body parser this will give undefined
+    res.sendFile(path.join(__dirname,'..', 'views', 'add-product.html'));
     res.redirect('/');
 });
 
