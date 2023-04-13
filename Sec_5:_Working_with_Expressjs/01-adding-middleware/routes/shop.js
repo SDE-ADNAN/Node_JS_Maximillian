@@ -13,7 +13,7 @@ router.get('/',(req, res, next) => {
     // 2. '..' this tells to go up one level and then search for views cause we are using this middleware inside the app.js so the path should be relative to that file (app.js). 
     // 3. 'views' name of the directory.
     // 4. 'shop.html' is name of the file.
-    // NOTE : here we are not using the / or \ for traversing the file system because in windows we use '\' for traversing and in linux and mac we use '/' for traversing.
+    // NOTE : here we are not using the / or \ for traversing the file system because in windows we use '\' for traversing and in linux and mac we use '/' for traversing
 });
 
 module.exports = router
