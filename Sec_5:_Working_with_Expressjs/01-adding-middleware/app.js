@@ -7,7 +7,8 @@ const bodyParser = require('body-Parser');
 const app = express();
 
 const adminRoutes = require("./routes/admin")
-const shopRoutes = require("./routes/shop")
+const shopRoutes = require("./routes/shop");
+const path = require('path');
 
 app.use(bodyParser.urlencoded({extended:false}))
 
@@ -19,7 +20,7 @@ app.use("/admin",adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next)=>{
-    res.status(404).send("<h1 style='color:#fe0000c7;'> Page not found </h1>")
+    res.status(404).sendFile(path.join(__dirname,"views","404.html"))
 })
 
 const server = http.createServer(app);
