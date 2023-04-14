@@ -14,6 +14,9 @@ const path = require('path');
 
 app.use(bodyParser.urlencoded({extended:false}))
 
+// for serving static files
+app.use(express.static(path.join(__dirname,"public")))
+
 // here also order matters 
 // here we are just using the adminRoutes object exported
 app.use("/admin",adminRoutes);
