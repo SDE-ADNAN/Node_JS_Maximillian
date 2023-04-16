@@ -6,6 +6,7 @@ const rootDir = require('../util/path');
 
 const router = express.Router();
 
+// using this products array to manage our products
 const products = [];
 
 // /admin/add-product => GET
@@ -20,4 +21,5 @@ router.post('/add-product', (req, res, next) => {
 });
 
 exports.routes = router;
+// exporting products to be available for every file
 exports.products = products;
