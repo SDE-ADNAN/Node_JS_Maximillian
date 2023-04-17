@@ -5,6 +5,11 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// this below line will set the templating engine as pug // config item
+app.set('view engine','pug');
+// this line will use the views folder as the dir where it will find all the pug files.
+app.set('views','views')
+
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
