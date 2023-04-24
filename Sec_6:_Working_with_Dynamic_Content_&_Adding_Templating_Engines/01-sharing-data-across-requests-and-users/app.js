@@ -2,16 +2,11 @@ const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const expressHbs = require("express-handlebars");
 
 const app = express();
 const port = 3000;
 
-app.engine(
-  "hbs",
-  expressHbs({ layoutsDir: "views/layouts", defaultLayout: "main-layout" , extname:'hbs'})
-); //  we need to use this type of import for the templating engine which does'nt sheeps along with  express ( in case of pug ,  it was directly shipped along with express )
-app.set("view engine", "hbs");
+app.set("view engine", "ejs");
 app.set("views", "views");
 
 const adminData = require("./routes/admin");
