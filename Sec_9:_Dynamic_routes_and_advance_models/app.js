@@ -21,4 +21,11 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+const port = 3000;
+
+app.listen(port);
+console.log(`started on port : ${port}`)
+
+var host  = Object.values(require('os').networkInterfaces()).reduce((r, list) => r.concat(list.reduce((rr, i) => rr.concat(i.family==='IPv4' && !i.internal && i.address || []), [])), [])
+
+console.log("your localhost is : "+ host)
