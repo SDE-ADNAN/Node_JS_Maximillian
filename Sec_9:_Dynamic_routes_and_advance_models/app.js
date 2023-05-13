@@ -24,8 +24,9 @@ app.use(errorController.get404);
 const port = 3000;
 
 app.listen(port);
-console.log(`started on port : ${port}`)
+console.log(`running at port : ${port}`)
 
 var host  = Object.values(require('os').networkInterfaces()).reduce((r, list) => r.concat(list.reduce((rr, i) => rr.concat(i.family==='IPv4' && !i.internal && i.address || []), [])), [])
 
-console.log("your localhost is : "+ host)
+console.log("your localhost is : "+ host);
+console.log("for access on other devices (on same network) : "+ host +":"+port+"/");
