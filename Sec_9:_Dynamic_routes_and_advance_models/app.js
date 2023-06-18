@@ -30,3 +30,6 @@ var host  = Object.values(require('os').networkInterfaces()).reduce((r, list) =>
 
 console.log("your localhost is : "+ host);
 console.log("for access on other devices (on same network) : "+ host +":"+port+"/");
+
+
+// done till lectuire 125th
